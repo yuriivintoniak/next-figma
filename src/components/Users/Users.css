@@ -1,0 +1,30 @@
+.users-page {
+  padding: 10px 20px 30px;
+}
+
+.page-title {
+  color: #333;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.user-list {
+  margin-top: 20px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.user-header {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.user-value {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
