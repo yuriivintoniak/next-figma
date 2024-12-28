@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-bottom: 2px solid #ddd;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  width: 200px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  text-align: center;
+  color: #171717;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.link:hover {
+  background-color: #f2f2f2; 
+}
+
+.link:focus {
+  outline: none;
+}
+
+.active {
+  color: #fff;
+  border-color: #bbb;
+  background-color: #171717;
+}
+
+.active:hover {
+  background-color: #383838;
+}
