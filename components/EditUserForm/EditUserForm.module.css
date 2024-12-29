@@ -1,0 +1,48 @@
+.container {
+  padding: 16px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 46px;
+}
+
+.form {
+  display: grid;
+  row-gap: 32px;
+  column-gap: 54px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.input {
+  width: 400px;
+  padding: 8px;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.selectInput {
+  width: 400px;
+  font-size: 0.875rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
