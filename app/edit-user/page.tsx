@@ -1,5 +1,6 @@
 import UserSelector from "@/components/UserSelector/UserSelector";
 import EditUserForm from "@/components/EditUserForm/EditUserForm";
+import ActionButtons from "@/components/ActionButtons/ActionButtons";
 
 export default function EditUser() {
   return (
@@ -10,6 +11,7 @@ export default function EditUser() {
         </h1>
         <UserSelector />
         <EditUserForm />
+        <ActionButtons />
       </div>
     </div>
   );
