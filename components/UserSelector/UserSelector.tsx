@@ -1,24 +1,38 @@
 "use client";
 
-import Form from "next/form";
 import Select from "react-select";
+import { SingleValue } from "react-select";
+import { User } from "@/types/user";
 import "./UserSelector.css";
 
-export default function UserSelector() {
+export default function UserSelector({
+  users,
+  onChange,
+}: {
+  users: User[];
+  onChange: (
+    selectedOption: SingleValue<{ value: string, label: string }>
+  ) => void;
+}) {
+  const options = users.map((user) => ({ 
+    value: user.name, 
+    label: user.name,
+  }));
+
   return (
     <div className="container">
-      <Form action="">
-        <div className="inputGroup">
-          <label htmlFor="user" className="label">
-            User
-          </label>
-          <Select
-            id="user"
-            placeholder="John Doe"
-            className="selectInput"
-          />
-        </div>
-      </Form>
+      <div className="inputGroup">
+        <label htmlFor="user" className="label">
+          User
+        </label>
+        <Select
+          id="user"
+          options={options}
+          onChange={onChange}
+          className="selectInput"
+          placeholder="Select a name..."
+        />
+      </div>
     </div>
   );
 }
