@@ -13,3 +13,7 @@ export interface User {
     value: string;
   };
 }
+
+export interface UserData {
+  users: User[];
+}
