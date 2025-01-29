@@ -1,6 +1,6 @@
 "use client";
 
-import { User } from "@/types/user";
+import { User } from "@/interfaces/user.intarface";
 import React, { useState, useEffect } from "react";
 import Form from "next/form";
 import Select from "react-select";
