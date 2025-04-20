@@ -1,0 +1,56 @@
+.table {
+  width: 100%;
+  margin-top: 2.5rem;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+.table thead {
+  border-bottom: 1px solid #ccc;
+}
+
+.table tbody {
+  max-height: 504px;
+}
+
+.table tbody tr {
+  height: 72px;
+}
+
+.th {
+  color: #333;
+  text-align: left;
+  font-weight: bold;
+  padding: 25px 30px;
+}
+
+.td {
+  color: #666;
+  text-align: left;
+  padding: 25px 30px;
+}
+
+.tr {
+  transition: background-color 0.3s ease;
+}
+
+.tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table :where(.th, .td):nth-child(1) {
+  width: 20%;
+}
+
+.table :where(.th, .td):nth-child(2) {
+  width: 40%;
+}
+
+.table :where(.th, .td):nth-child(3) {
+  width: 20%;
+}
+
+.table :where(.th, .td):nth-child(4) {
+  width: 20%;
+}

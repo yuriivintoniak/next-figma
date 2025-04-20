@@ -3,6 +3,9 @@ import { getQueryClient } from "../get-query-client";
 import { getAllUsers, GET_ALL_USERS } from "@/services/user";
 import UsersTable from "@/components/users/UsersTable/UsersTable";
 
+import users from "@/data/users.json";
+import { IUser } from "@/interfaces/user.interface";
+
 export default async function UsersPage() {
   const queryClient = getQueryClient();
 
@@ -13,12 +16,12 @@ export default async function UsersPage() {
 
   return (
     <div className="h-screen flex justify-center items-center">
-      <div className="p-5 border border-gray-500">
-        <h1 className="my-10 text-xl font-medium text-center uppercase">
+      <div className="p-10 border border-gray-500 w-[1200px] h-[700px]">
+        <h1 className="text-xl font-medium text-center uppercase tracking-widest">
           Users
         </h1>
         <HydrationBoundary state={dehydrate(queryClient)}>    
-          <UsersTable />
+          <UsersTable data={users as IUser[]} />
         </HydrationBoundary>
       </div>
     </div>
