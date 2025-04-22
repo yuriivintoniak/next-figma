@@ -1,17 +1,24 @@
+.tableWrapper {
+  width: 100%;
+  font-size: 14px;
+  overflow-y: auto;
+  margin-top: 2.5rem;
+  border: 1px solid #ccc;
+  max-height: calc(72px * 8);
+}
+
 .table {
   width: 100%;
-  margin-top: 2.5rem;
-  font-size: 14px;
-  border: 1px solid #ccc;
+  table-layout: fixed;
   border-collapse: collapse;
 }
 
-.table thead {
+.thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: white;
   border-bottom: 1px solid #ccc;
-}
-
-.table tbody {
-  max-height: 504px;
 }
 
 .table tbody tr {

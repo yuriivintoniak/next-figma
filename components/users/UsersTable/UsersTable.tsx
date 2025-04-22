@@ -17,9 +17,9 @@ export default function UsersTable({ data }: { data: IUser[] }) {
   });
 
   return (
-    <>
+    <div className={styles.tableWrapper}>
       <table className={styles.table}>
-        <thead>
+        <thead className={styles.thead}>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
@@ -42,6 +42,6 @@ export default function UsersTable({ data }: { data: IUser[] }) {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }
