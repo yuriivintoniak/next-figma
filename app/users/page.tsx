@@ -3,9 +3,6 @@ import { getQueryClient } from "../get-query-client";
 import { getAllUsers, GET_ALL_USERS } from "@/services/user";
 import UsersTable from "@/components/users/UsersTable/UsersTable";
 
-import users from "@/data/users.json";
-import { IUser } from "@/interfaces/user.interface";
-
 export default async function UsersPage() {
   const queryClient = getQueryClient();
 
@@ -21,7 +18,7 @@ export default async function UsersPage() {
           Users
         </h1>
         <HydrationBoundary state={dehydrate(queryClient)}>    
-          <UsersTable data={users as IUser[]} />
+          <UsersTable />
         </HydrationBoundary>
       </div>
     </div>

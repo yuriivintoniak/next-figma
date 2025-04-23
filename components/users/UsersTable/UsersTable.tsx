@@ -1,6 +1,7 @@
 "use client";
 
-import { IUser } from "@/interfaces/user.interface";
+import { useQuery } from "@tanstack/react-query";
+import { getAllUsers, GET_ALL_USERS } from "@/services/user";
 import {
   useReactTable,
   getCoreRowModel,
@@ -9,12 +10,25 @@ import {
 import { columns } from "./columns";
 import styles from "./UsersTable.module.css";
 
-export default function UsersTable({ data }: { data: IUser[] }) {
+export default function UsersTable() {
+  const {
+    data: users,
+    error: usersError, 
+    isError: isUsersError,
+  } = useQuery({
+    queryKey: [GET_ALL_USERS],
+    queryFn: () => getAllUsers(),
+  });
+
   const table = useReactTable({
-    data,
+    data: users ?? [],
     columns,
     getCoreRowModel: getCoreRowModel(),
   });
+
+  if (isUsersError) {
+    return <div>Error: {usersError.message}</div>;
+  }
 
   return (
     <div className={styles.tableWrapper}>
